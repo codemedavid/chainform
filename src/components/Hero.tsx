@@ -146,7 +146,10 @@ const Hero: React.FC<HeroProps> = ({ onShopAll }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
                 onClick={onShopAll}
-                className="group relative px-10 py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-brand-lg font-semibold text-lg shadow-purple hover:shadow-lg hover:from-purple-600 hover:to-purple-700 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
+                className="group relative px-10 py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-brand-lg font-semibold text-lg hover:from-purple-600 hover:to-purple-700 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                style={{
+                  boxShadow: '0 10px 30px -4px rgba(111, 106, 217, 0.6), 0 6px 16px -2px rgba(111, 106, 217, 0.4)'
+                }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 <span className="relative flex items-center justify-center gap-3">
@@ -157,7 +160,10 @@ const Hero: React.FC<HeroProps> = ({ onShopAll }) => {
 
               <a
                 href="/coa"
-                className="px-8 py-4 bg-transparent text-purple-600 border-2 border-sage-400 rounded-brand-lg font-semibold text-lg hover:bg-sage-50 hover:border-sage-500 transition-all duration-300"
+                className="px-8 py-4 bg-white text-purple-600 border-2 border-sage-400 rounded-brand-lg font-semibold text-lg hover:bg-sage-50 hover:border-sage-500 hover:-translate-y-1 transition-all duration-300"
+                style={{
+                  boxShadow: '0 10px 30px -4px rgba(140, 191, 168, 0.55), 0 6px 16px -2px rgba(140, 191, 168, 0.35)'
+                }}
               >
                 View Lab Reports
               </a>
