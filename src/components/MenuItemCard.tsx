@@ -112,7 +112,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
       {/* Product Details */}
       <div className="p-4 flex-1 flex flex-col">
         <h3 className="font-semibold text-theme-text mb-1 line-clamp-2">{product.name}</h3>
-        <p className="text-sm text-gray-500 mb-3 line-clamp-2 min-h-[2.5rem]">{product.description}</p>
+        <p className="text-sm text-gray-500 mb-3 line-clamp-2 min-h-[2.5rem]">{product.description.replace(/<[^>]*>/g, '')}</p>
 
         {/* Variations (Sizes) */}
         <div className="mb-4 min-h-[4rem]">
@@ -133,10 +133,10 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
                     className={`
                       px-2 py-1 text-xs rounded border transition-colors relative z-20
                       ${selectedVariation?.id === variation.id && !isOutOfStock
-                        ? 'bg-navy-900 text-white border-navy-900'
+                        ? 'bg-gray-900 text-white border-gray-900'
                         : isOutOfStock
                           ? 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed'
-                          : 'bg-white text-gray-600 border-gray-200 hover:border-navy-900'
+                          : 'bg-white text-black border-gray-300 hover:border-gray-900'
                       }
                     `}
                   >

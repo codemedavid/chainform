@@ -14,6 +14,7 @@ import FAQManager from './FAQManager';
 import ShippingManager from './ShippingManager';
 import SiteSettingsManager from './SiteSettingsManager';
 import PromoCodeManager from './PromoCodeManager';
+import RichTextEditor from './RichTextEditor';
 // GuideManager removed (Peptalk functionality disabled)
 
 const AdminDashboard: React.FC = () => {
@@ -402,7 +403,7 @@ const AdminDashboard: React.FC = () => {
               )}
             </div>
 
-            <button type="submit" className="w-full bg-navy-900 hover:bg-navy-800 text-white py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg">
+            <button type="submit" className="w-full bg-navy-900 hover:bg-navy-800 text-black py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg">
               Access Dashboard
             </button>
           </form>
@@ -483,12 +484,10 @@ const AdminDashboard: React.FC = () => {
 
                   <div className="md:col-span-2">
                     <label className="block text-xs font-semibold text-gray-700 mb-1">Description *</label>
-                    <textarea
+                    <RichTextEditor
                       value={formData.description || ''}
-                      onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                      className="input-field text-sm"
+                      onChange={(html) => setFormData({ ...formData, description: html })}
                       placeholder="Detailed product description..."
-                      rows={3}
                     />
                   </div>
 

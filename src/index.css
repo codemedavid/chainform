@@ -237,3 +237,79 @@ h6 {
 .chainform-card:hover {
   @apply shadow-medium border-neutral-200 -translate-y-0.5;
 }
+
+/* Rich Text Editor */
+.rich-text-editor:empty::before {
+  content: attr(data-placeholder);
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.rich-text-editor h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0.4em 0;
+}
+
+.rich-text-editor h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.3em 0;
+}
+
+.rich-text-editor h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0.2em 0;
+}
+
+.rich-text-editor ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+.rich-text-editor ol {
+  list-style: decimal;
+  margin-left: 1.5em;
+}
+
+.rich-text-editor li {
+  margin: 0.15em 0;
+}
+
+/* Rendered product description HTML */
+.product-description h1 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0.4em 0;
+}
+
+.product-description h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0.3em 0;
+}
+
+.product-description h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+  margin: 0.2em 0;
+}
+
+.product-description ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+.product-description ol {
+  list-style: decimal;
+  margin-left: 1.5em;
+}
+
+.product-description li {
+  margin: 0.15em 0;
+}
+
+.product-description p {
+  margin: 0.25em 0;
+}
